@@ -77,10 +77,10 @@ client.on('messageCreate', async (message) => {
         )
             return message.channel.send('Please provide a duration for the giveaway!\nThe abbreviations for units of time are: `d (days), h (hours), m (minutes), s (seconds)`');
 
-        if (!winnerCount) return message.channel.send('Please provide the number of winners for the giveaway! E.g. `@role`');
+        if (!winnerCount) return message.channel.send('Please provide the winner of the giveaway it must be a role! E.g. `@role`');
 
         if (!args[2])
-            return message.channel.send('Please provide the number of winners for the giveaway! E.g. `@role`');
+            return message.channel.send('Please provide the winner of the giveaway it must be a role! E.g. `@role`');
 
         let giveawayChannel = message.mentions.channels.first();
         if (!giveawayChannel || !args[3]) return message.channel.send("Please provide a valid channel to start the giveaway!");
